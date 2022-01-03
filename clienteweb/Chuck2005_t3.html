@@ -1,0 +1,44 @@
+<html>
+
+    <script type="text/javascript">
+    window.onload = function ()
+    {
+
+$.icndb.getRandomJokes(
+    { number:3,success:(response) => 
+        {
+            response.forEach(element => {
+                var textoChiste = element.joke;
+                $("h2").append('<li>'+textoChiste+'</li>')
+            });
+
+         }   
+     });
+}
+
+    </script>
+    
+    <head>
+         <meta charset="utf-8">
+         <!-- Bootstrap add the responsive viewport meta tag  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <!-- JQuery -->
+         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+         <script src="http://code.icndb.com/jquery.icndb.js"></script>
+         <title>Chuck 2005</title>
+        </head>
+<body>
+    <div class="center jumbotron" style="background-color:#e5ee96;">              
+        <div class="card" style="background-color: #f3f706;">
+            <div class="container">                
+                <h1 class="my-4"> Chuck 2005</h1>
+                <h2 class="lead"> </h2>
+                <img src=../grupo/chuc.jpeg></img>
+                <h3 class="display-4"> Esta es la tercera tarea con Jquery,bootstrapc y getRandomJokes </h3>
+                <p><a href="../grupo/Chuck2005_t3.html" class="btn btn-success btn-lg">Leer más chistes &raquo;</a></p>
+            </div>
+    </div>
+</body>
+</html>

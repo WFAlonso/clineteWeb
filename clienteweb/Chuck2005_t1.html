@@ -1,0 +1,63 @@
+<html>
+    
+ 
+    <script type="text/javascript">
+    window.onload = function (){
+        function reqListener () {
+            let jsonObj = JSON.parse(this.response);
+            let textoChiste = jsonObj.value.joke;
+            let h2 = document.querySelector("h2");
+            h2.innerHTML= textoChiste;         
+        }
+        //Crea el objeto
+        let httpReq = new XMLHttpRequest();
+        //Crea el open (la conexión)
+        httpReq.open('GET','http://api.icndb.com/jokes/random/',true);
+     /*   httpReq.onreadystatechange = function(){
+            let jsonObj = JSON.parse(this.response);
+            let textoChiste = jsonObj.value.joke;
+            let h1 = document.querySelector("h1");
+            h1.innerHTML= textoChiste;
+        };
+    */
+        httpReq.addEventListener("load",reqListener)
+        httpReq.send();
+    };
+    </script>
+    
+    <head>
+         <meta charset="utf-8">
+         <!-- Bootstrap add the responsive viewport meta tag  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <title>Chuck 2005</title>
+        </head>
+    <body>
+        <!-- Bootstrap Optional JavaScript -->
+        <!-- Bootstrap jQuery first, then Popper.js, then Bootstrap JS -->
+        <!--
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        -->   
+  <br>
+  <br>
+  <br>
+          <div class="center jumbotron" style="background-color:#e5ee96;">
+            
+                <div class="card" style="background-color: #f3f706;">
+                    <div class="ontainer">                
+                  <h1 class="display-4">Chistes Chuck Norris 2005</h1>
+                  <hr class="my-4">
+                  <h2 class="lead" > Aqui ira el chiste</h2>
+                  <img src=../grupo/chuc.jpeg></img>
+                  <h4 class="display-4"> Esta es la primera tarea con bootstrap-jumbotron </h4>       
+                  <p><a href="../grupo/Chuck2005_t1.html" class="btn btn-success btn-lg">Mostrar broma &raquo;</a></p>
+                  <div>
+           </div>
+
+
+        </div>
+    </body>
+</html>
